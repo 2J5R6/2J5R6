@@ -17,17 +17,14 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_timezone: America/New_York
 
-          # 🔥 Activamos el plugin de commits en repos externos
-          plugin_contributions: yes
-
-          # 🔥 Incluimos lenguajes más usados (incluso en repos externos)
+          # 🔥 Simplificamos la generación de datos para evitar bloqueos
           plugin_languages: yes
           plugin_languages_ignored: html, css
-          plugin_languages_limit: 8
-
-          # 🔥 Contar commits en TODOS los repos a los que contribuyes
+          plugin_languages_limit: 5
+          
           plugin_repositories: yes
           plugin_repositories_affiliations: owner, collaborator, organization_member
-
-          # 🔥 Mostrar commits recientes en proyectos externos
-          plugin_activity: yes
+          
+          plugin_activity: no  # Desactivamos commits recientes para evitar bloqueos
+          plugin_followup: no   # Desactivamos detalles extra para hacer el proceso más rápido
+          plugin_lines: no
