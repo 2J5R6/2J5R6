@@ -1,4 +1,4 @@
 # 2JR56
 
 ### 🚀 GitHub Metrics
-![Metrics](./metrics.svg)
+![Metrics](./github-metrics.svg)
