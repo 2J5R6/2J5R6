@@ -1,7 +1,7 @@
 name: Generate Metrics
 on:
   schedule:
-    - cron: '0 0 * * 1'  # Cada lunes a medianoche
+    - cron: '0 0 * * 1'  # Cada lunes a medianoche (ajusta si deseas)
   workflow_dispatch:
 
 jobs:
@@ -14,7 +14,7 @@ jobs:
       - name: Clonar el repositorio
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          fetch-depth: 0  # Para poder hacer pull --rebase sin problemas
 
       - name: Generar estadísticas con lowlighter/metrics
         uses: lowlighter/metrics@latest
@@ -26,17 +26,28 @@ jobs:
           config_timezone: America/Bogota
           config_display: wide
 
-          # === Plugins ===
+          # =============== PLUGINS DE LENGUAJES ===============
           plugin_lines: yes
-
           plugin_languages: yes
-          plugin_languages_indepth: yes           # Analiza más en detalle los repos
-          plugin_languages_layout: donut          # Muestra un gráfico tipo dona
+          plugin_languages_indepth: yes
+          plugin_languages_layout: donut
           plugin_languages_details: bytes-size, percentage, files-count
-          plugin_languages_limit: 10             # Muestra hasta 10 lenguajes
-          plugin_languages_threshold: 0          # No excluir lenguajes poco usados
-          # No ignores lenguajes, para que aparezca todo
-          # plugin_languages_ignored: ''          # (Comentado para enfatizar que no se usa)
+          plugin_languages_limit: 10
+          plugin_languages_threshold: 0  # Mostrar hasta lenguajes menos usados
+
+          # =============== PLUGIN DE ACHIEVEMENTS ===============
+          plugin_achievements: yes
+          plugin_achievements_display: detailed
+          plugin_achievements_threshold: C
+          plugin_achievements_limit: 0   # 0 = sin límite
+
+          # =============== PLUGIN DE TOPICS ===============
+          plugin_topics: yes
+          plugin_topics_mode: starred       # Muestra los topics de repos que hayas “starred”
+          plugin_topics_filter: starred     # Filtra repos “starred”
+          plugin_topics_limit: 15           # Muestra hasta 15 topics
+          plugin_topics_sort: stars         # Ordena por número de estrellas
+          plugin_topics_charts: bar         # Representación en forma de gráfica de barras
 
       - name: Commit & Push cambios
         run: |
