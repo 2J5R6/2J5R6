@@ -58,6 +58,6 @@ Soy un estudiante de ingeniería **Mecatrónica** y **Desarrollador Full Stack**
 
 ## 📝 Acerca de mí
 
-Soy un curioso apaasionado que fusiona la electrónica y la programación para crear soluciones innovadoras. Me encanta aprender y experimentar con nuevas tecnologías, y siempre busco optimizar tanto hardware como software para lograr resultados eficientes y robustos.
+Soy un curioso apasionado que fusiona la electrónica y la programación para crear soluciones innovadoras. Me encanta aprender y experimentar con nuevas tecnologías, y siempre busco optimizar tanto hardware como software para lograr resultados eficientes y robustos.
 
 
