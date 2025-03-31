@@ -1,7 +1,7 @@
 <!-- Encabezado con imagen de perfil, puedes agregar una imagen de portada si lo deseas -->
 # ¡Hola, soy Julián Rosas! 👋
 
-Soy un estudiante de ingeniería **Mecatrónica** y **Desarrollador Full Stack** apasionado por la integración de hardware y software. He trabajado con sistemas embebidos, sensores de nueve ejes (como el ICM-20948) y en proyectos web combinando tecnologías modernas de front-end y back-end.
+Soy un estudiante de **Ingeniería Mecatrónica** y **Desarrollador Full Stack** apasionado por la integración de hardware y software. He trabajado con sistemas embebidos, sensores de nueve ejes (como el ICM-20948) y en proyectos web combinando tecnologías modernas de front-end y back-end.
 
 ---
 
