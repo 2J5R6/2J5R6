@@ -52,8 +52,7 @@ Soy un estudiante de ingeniería **Mecatrónica** y **Desarrollador Full Stack**
 ## 🔗 Conecta conmigo
 
 - [LinkedIn](https://www.linkedin.com/in/envision-julián-andrés-rosas-sánchez-creating)
-- [Twitter](https://twitter.com/)  <!-- Agrega tu link si tienes -->
-- [Email](mailto:tuemail@ejemplo.com)
+- [Email](julianrosassan@gmail.com)
 
 ---
 
