@@ -24,10 +24,19 @@ Soy un estudiante de **Ingeniería Mecatrónica** y **Desarrollador Full Stack**
 
 ## 🚀 Proyectos Destacados
 
-### 📡 Proyecto de Sensor de Nueve Ejes con STM y ESP32
-- **Descripción:** Proyecto de recolección de datos en tiempo real utilizando el sensor ICM-20948 con microcontroladores STM y ESP32.  
+### 📡 Proyecto de Sensor de Nueve Ejes con ESP32
+- **Descripción:** Proyecto de recolección de datos en tiempo real utilizando el sensor ICM-20948 con microcontroladores ESP32.  
 - **Tecnologías:** C++, Arduino, WebSocket, etc.  
 - [Ver Proyecto](https://github.com/2J5R6/ICM20948-WebSocket-DataCollector)
+
+### 🔌 Sistema de Control de LEDs mediante UART y Web Serial API
+- **Descripción:** Implementa un sistema de control remoto de LEDs RGB utilizando la comunicación serial UART entre un microcontrolador STM32F767 y una aplicación web. Permite controlar LEDs individuales, activar modos predefinidos y recibir retroalimentación en tiempo real.
+- **Tecnologías:** C++, STM32, UART, Web Serial API, JavaScript, HTML, CSS.
+- **Características clave:**
+  - Configuración a nivel de registro de USART para una comunicación eficiente.
+  - Interfaz web con Web Serial API para control remoto.
+  - Sistema de modos para controlar LEDs (por ejemplo, encender el LED rojo, azul o verde según el modo).
+- [Ver Proyecto](https://github.com/2J5R6/USART_Registros-STM32)
 
 ### 💻 Aplicaciones Web Integradas
 - **Descripción:** Desarrollo de páginas web donde integro tecnologías de front-end y back-end para soluciones completas.  
@@ -35,7 +44,7 @@ Soy un estudiante de **Ingeniería Mecatrónica** y **Desarrollador Full Stack**
 - [Explorar Repositorios](https://github.com/2J5R6?tab=repositories)
 
 ### 🔧 Otros Proyectos y Contribuciones
-- **Ensamblador y Springts:** Experiencias tempranas y avanzadas trabajando con ensamblador, reflejadas en repositorios colaborativos.  
+- **Ensamblador:** Experiencias tempranas trabajando con ensamblador, reflejadas en repositorios colaborativos.  
 - **Contribuciones a Proyectos Externos:** He participado en proyectos de terceros, especialmente en TypeScript y frameworks modernos.
 - [Ver más contribuciones](https://github.com/2J5R6?tab=overview&from=2023-01-01&to=2023-12-31)
 
