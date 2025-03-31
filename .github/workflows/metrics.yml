@@ -1,44 +1,39 @@
 name: Generate Metrics
 on:
-  # Programa la ejecución cada lunes a la medianoche (ajusta según prefieras)
   schedule:
-    - cron: '0 0 * * 1'
-  # Permite ejecutar manualmente el workflow desde la pestaña "Actions"
+    - cron: '0 0 * * 1'  # Se ejecuta cada lunes a la medianoche. Puedes ajustar la frecuencia.
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 1) Descarga tu repositorio
-      - uses: actions/checkout@v3
+      - name: Clonar el repositorio
+        uses: actions/checkout@v3
 
-      # 2) Genera la métrica usando lowlighter/metrics
-      - name: Generate GitHub Metrics
+      - name: Generar estadísticas con lowlighter/metrics
         uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }} 
-          # Este token personal se configura en "Settings" -> "Secrets and variables" -> "Actions" -> "New repository secret"
-          # Debe tener permisos públicos (public_repo)
+          token: ${{ secrets.METRICS_TOKEN }}
           user: 2J5R6
+          # Cambia el template si prefieres otro estilo: "classic", "dark", "minimal", etc.
           template: classic
+          # Selecciona las secciones que quieras mostrar en el SVG
           base: header, activity, community, repositories, metadata
+          # Configuración de zona horaria y visualización
           config_timezone: America/Bogota
           config_display: wide
-          plugin_lines: yes  # Ejemplo de plugin adicional
+          # Plugins adicionales para mostrar más información
+          plugin_lines: yes
           plugin_languages: yes
           plugin_languages_analysis_timeout: 30
           plugin_languages_categories: programming
           plugin_languages_ignored: html, css
-          # Puedes agregar más plugins según la doc oficial:
-          # https://github.com/lowlighter/metrics#-documentation
 
-      # 3) Commitea y sube los cambios (para que el README o el SVG se actualicen)
-      - name: Commit & Push changes
+      - name: Commit & Push cambios
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Añade a seguimiento el archivo que genera metrics (por defecto se llama "metrics.svg" en la raíz)
           git add -A
-          git commit -m "chore: update metrics"
+          git commit -m "chore: update metrics" || echo "No hay cambios para commitear"
           git push
